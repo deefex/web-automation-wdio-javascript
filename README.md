@@ -7,7 +7,7 @@ Selenium tests experiment for https://the-internet.herokuapp.com/login using Nod
 * Clone repository
 * run `npm install` in root directory
 
-#Execution
+# Execution
 
 Execution in on local machine only.
 
