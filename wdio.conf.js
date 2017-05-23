@@ -213,6 +213,7 @@ exports.config = {
      * @param {Object} test test details
      */
     // afterTest: function (test) {
+    //     console.log("#################################################### after test hook")
     // },
     /**
      * Hook that gets executed after the suite has ended

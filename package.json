@@ -16,7 +16,7 @@
     "selenium-standalone": "6.4.1"
   },
   "scripts": {
-    "pretest": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+    "pretest": "npm install && rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
     "test": "./node_modules/.bin/wdio  wdio.conf.js || true",
     "posttest": "allure generate allure-results && allure open"
   },
