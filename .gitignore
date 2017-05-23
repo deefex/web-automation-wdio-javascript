@@ -8,6 +8,7 @@ allure-results
 coverage
 .idea
 build
+.vscode
 
 
 !gruntfile.js
