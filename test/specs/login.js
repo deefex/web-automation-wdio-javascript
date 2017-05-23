@@ -18,10 +18,8 @@ describe('The login page', function() {
         LoginPage.submit();
 
         LoginPage.flash.waitForExist();
-        thing = expect(LoginPage.flash.getText()).to.contain('You logged into a secure area!');
-        console.log('####### - RESULT - ' + thing);
         if (!expect(LoginPage.flash.getText()).to.contain('You logged into a secure area!')) {
-            browser.saveScreenshot('./testfail.png');
+            browser.saveScreenshot('./test_fail.png');
         }
     });
 });
