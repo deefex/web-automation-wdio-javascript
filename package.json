@@ -1,0 +1,30 @@
+{
+  "name": "wdio-theinternet",
+  "version": "1.0.0",
+  "description": "NodeJS/wdio Test Example",
+  "main": "wdio.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "allure-commandline": "2.0.1",
+    "chai": "3.5.0",
+    "webdriverio": "4.8.0",
+    "wdio-mocha-framework": "0.5.10",
+    "wdio-allure-reporter": "0.1.2",
+    "wdio-selenium-standalone-service": "0.0.8",
+    "selenium-standalone": "6.4.1"
+  },
+  "scripts": {
+    "pretest": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+    "test": "./node_modules/.bin/wdio  wdio.conf.js || true",
+    "posttest": "allure generate allure-results && allure open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deefex/wdio-theinternet.git"
+  },
+  "keywords": [ ],
+  "author": "Del Dewar",
+  "license": "ISC"
+}
