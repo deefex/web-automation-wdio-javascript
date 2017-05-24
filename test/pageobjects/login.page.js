@@ -13,6 +13,12 @@ var loginPage = Object.create(Page, {
         Page.open.call(this, 'login');
     } },
 
+    attempt_Login: { value: function (username, password) {
+        this.username.setValue(username);
+        this.password.setValue(password);
+        this.form.submitForm();
+    } },
+
     submit: { value: function() {
         this.form.submitForm();
     } }
