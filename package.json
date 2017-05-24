@@ -9,6 +9,7 @@
   "dependencies": {
     "allure-commandline": "2.0.1",
     "chai": "3.5.0",
+    "fs": "0.0.1-security",
     "webdriverio": "4.8.0",
     "wdio-mocha-framework": "0.5.10",
     "wdio-allure-reporter": "0.1.2",

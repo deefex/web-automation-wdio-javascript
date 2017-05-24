@@ -1,4 +1,5 @@
 var notifier = require('node-notifier');
+var fs = require('fs');
 
 exports.config = {
     
@@ -224,7 +225,11 @@ exports.config = {
                 title: 'Test FAILURE!',
                 message: test.parent + ' ' + test.title
             });
-            browser.saveScreenshot('./testfail.png');
+            if (!fs.existsSync(this.screenshotPath)) {
+                fs.mkdirSync(this.screenshotPath);
+            }
+            var screenshotFile = (test.parent + ' ' + test.title + '.png').replace(/ /g, '_');
+            browser.saveScreenshot(this.screenshotPath + screenshotFile);
         }
     },
     /**
