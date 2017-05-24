@@ -1,3 +1,5 @@
+var notifier = require('node-notifier');
+
 exports.config = {
     
     //
@@ -144,8 +146,12 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+        notifier.notify({
+            title: 'NodeJS/wdio Test Example',
+            message: 'Test run started'
+        });
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
@@ -166,7 +172,7 @@ exports.config = {
         browser.timeouts('implicit', 5000);
         browser.timeouts('script', 60000);
         browser.timeouts('page load', 300000);
-    }
+    },
     //
     /**
      * Hook that gets executed before the suite starts
@@ -212,9 +218,15 @@ exports.config = {
      * Function to be executed after a test (in Mocha/Jasmine) or a step (in Cucumber) starts.
      * @param {Object} test test details
      */
-    // afterTest: function (test) {
-    //     console.log("#################################################### after test hook")
-    // },
+    afterTest: function (test) {
+        if (!test.passed) {
+            notifier.notify({
+                title: 'Test FAILURE!',
+                message: test.parent + ' ' + test.title
+            });
+            browser.saveScreenshot('./testfail.png');
+        }
+    },
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
@@ -243,6 +255,10 @@ exports.config = {
      * possible to defer the end of the process using a promise.
      * @param {Object} exitCode 0 - success, 1 - fail
      */
-    // onComplete: function(exitCode) {
-    // }
+    onComplete: function(exitCode) {
+        notifier.notify({
+            title: "NodeJS/wdio Test Example",
+            message: 'Tests finished running.'
+        });
+    }
 }
