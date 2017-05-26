@@ -1,0 +1,21 @@
+# Top-most EditorConfig file
+root = true
+
+[{src,scripts}/**.{ts,json,js}]
+# Unix-style newlines with a newline ending every file
+end_of_line = lf
+insert_final_newline = true
+
+# Indentation override
+indent_style = space
+indent_size = 2
+
+# Character set
+charset = utf-8
+
+# Get rid of annoying trailing spaces
+trim_trailing_whitespace = true
+
+[*.md]
+# Get rid of annoying trailing spaces (for markdown)
+trim_trailing_whitespace = false

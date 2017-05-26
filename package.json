@@ -15,12 +15,16 @@
     "wdio-allure-reporter": "0.1.2",
     "wdio-selenium-standalone-service": "0.0.8",
     "selenium-standalone": "6.4.1",
-    "node-notifier": "5.1.2"
+    "node-notifier": "5.1.2",
+    "nsp": "2.6.3",
+    "npm-run-all": "4.0.2"
   },
   "scripts": {
-    "pretest": "npm install && rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+    "pretest": "npm-run-all --parallel pretest-security pretest-clean",
     "test": "./node_modules/.bin/wdio  wdio.conf.js || true",
-    "posttest": "allure generate allure-results && allure open"
+    "posttest": "allure generate allure-results && allure open",
+    "pretest-security": "./node_modules/.bin/nsp check",
+    "pretest-clean": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots"
   },
   "repository": {
     "type": "git",
