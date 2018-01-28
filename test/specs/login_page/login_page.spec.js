@@ -5,6 +5,7 @@ describe('https://the-internet.herokuapp.com/login', function() {
 
     it('should REFUSE access to the secure area with invalid credentials', function() {
         LoginPage.attemptLogin('invalid_user', 'invalid_password');
+        LoginPage.loginMessage.waitForExist();
         expect(LoginPage.loginMessage.getText()).to.contain('Your username is invalid!');
     });
 
