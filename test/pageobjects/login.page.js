@@ -3,25 +3,23 @@ var Page = require('./page');
 var loginPage = Object.create(Page, {
 
     // Page object elements
-    form:       { get: function () { return browser.element('#login'); } },
-    flash:      { get: function () { return browser.element('#flash'); } },
-    username:   { get: function () { return browser.element('#username'); } },
-    password:   { get: function () { return browser.element('#password'); } },
+    loginForm:      { get: function () { return browser.element('#login'); } },
+    loginMessage:   { get: function () { return browser.element('#flash'); } },
+    usernameField:  { get: function () { return browser.element('#username'); } },
+    passwordField:  { get: function () { return browser.element('#password'); } },
 
     // Define or overwrite page methods
     open:   { value: function () {
         Page.open.call(this, 'login');
     } },
 
-    attempt_Login: { value: function (username, password) {
-        this.username.setValue(username);
-        this.password.setValue(password);
-        this.form.submitForm();
-    } },
-
-    submit: { value: function() {
-        this.form.submitForm();
+    attemptLogin: { value: function (username, password) {
+        this.open();
+        this.usernameField.setValue(username);
+        this.passwordField.setValue(password);
+        this.loginForm.submitForm();
     } }
+
 });
 
 module.exports = loginPage;

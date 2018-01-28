@@ -7,30 +7,32 @@
     "test": "test"
   },
   "dependencies": {
-    "allure-commandline": "2.0.1",
-    "chai": "3.5.0",
+    "allure-commandline": "^2.5.0",
+    "chai": "^4.1.2",
     "fs": "0.0.1-security",
-    "webdriverio": "4.8.0",
-    "wdio-mocha-framework": "0.5.10",
-    "wdio-allure-reporter": "0.1.2",
-    "wdio-selenium-standalone-service": "0.0.8",
-    "selenium-standalone": "6.4.1",
-    "node-notifier": "5.1.2",
-    "nsp": "2.6.3",
-    "npm-run-all": "4.0.2"
+    "webdriverio": "^4.10.1",
+    "wdio-mocha-framework": "^0.5.12",
+    "wdio-allure-reporter": "^0.3.2",
+    "wdio-selenium-standalone-service": "^0.0.9",
+    "selenium-standalone": "^6.12.0",
+    "npm-run-all": "^4.1.2",
+    "node-notifier": "^5.2.1"
+  },
+  "devDependencies": {
+    "wdio-spec-reporter": "^0.1.3"
   },
   "scripts": {
-    "pretest": "npm-run-all --parallel pretest-security pretest-clean",
-    "test": "./node_modules/.bin/wdio  wdio.conf.js || true",
-    "posttest": "allure generate allure-results && allure open",
-    "pretest-security": "./node_modules/.bin/nsp check",
-    "pretest-clean": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots"
+    "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+    "pretest": "npm run cleanup",
+    "test": "./node_modules/.bin/wdio ./conf/wdio.conf.js",
+    "report": "allure generate allure-results && allure open",
+    "test:report": "npm-run-all test report"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deefex/wdio-theinternet.git"
   },
-  "keywords": [ ],
+  "keywords": [],
   "author": "Del Dewar",
   "license": "ISC"
 }

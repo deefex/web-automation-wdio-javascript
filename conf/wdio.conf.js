@@ -13,7 +13,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/*.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -46,7 +46,7 @@ exports.config = {
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         maxInstances: 5,
-        browserName: 'firefox'
+        browserName: 'chrome'
     }],
     //
     // ===================
@@ -60,7 +60,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    logLevel: 'silent',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -117,11 +117,12 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
+    deprecationWarnings: false,
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['allure'],
+    reporters: ['spec', 'allure'],
     reporterOptions: {
         allure: {
             outputDir: 'allure-results'

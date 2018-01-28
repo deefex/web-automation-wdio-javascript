@@ -1,6 +1,6 @@
 # Information
 
-Selenium tests experiment for https://the-internet.herokuapp.com/login using NodeJS/webdriverio and boilerplate code.
+Selenium tests experiment for https://the-internet.herokuapp.com/ pages using NodeJS/webdriverio.
 
 # Setup
 
@@ -8,7 +8,7 @@ Selenium tests experiment for https://the-internet.herokuapp.com/login using Nod
 * run `npm install` in root directory
 
 # Execution
-
 Execution in on local machine only.
 
-* run `npm test` to run the tests
+* `npm run test` to run the tests
+* `npm run test:report` to run the tests with allure reporting
