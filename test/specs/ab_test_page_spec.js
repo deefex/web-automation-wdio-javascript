@@ -5,10 +5,10 @@ describe('A/B Testing: https://the-internet.herokuapp.com/abtest', function() {
 
     it('displays either the A/B Test Control page OR the A/B Test Variation 1 page', function() {
         AbTestPage.open();
-        // What I wanted to do is have a logical or using the heading strings 'A/B Test Control'
-        // and 'A/B Test Variation 1' but chai expect doesn't really support that, so this will
-        // have to do in the meantime
-        expect(AbTestPage.pageHeading).to.not.equal('No A/B Test');
+        // chai/expect doesn't handle logical OR gracefully, so we'll use a dinky workaround
+        // to check whether the page header is one of two possible A/B variants.
+		var abVariations = ['A/B Test Variation 1', 'A/B Test Control'];
+		expect(abVariations.includes(AbTestPage.pageHeading)).to.equal(true);
     });
 
     it('displays the No A/B Test page when an opt-out cookie is set', function() {
