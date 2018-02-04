@@ -1,4 +1,3 @@
-var notifier = require('node-notifier');
 var fs = require('fs');
 
 exports.config = {
@@ -13,7 +12,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/*.js'
+        './test/specs/br*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -149,10 +148,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     onPrepare: function (config, capabilities) {
-        notifier.notify({
-            title: 'NodeJS/wdio Test Example',
-            message: 'Test run started'
-        });
+
     },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
@@ -222,10 +218,6 @@ exports.config = {
      */
     afterTest: function (test) {
         if (!test.passed) {
-            notifier.notify({
-                title: 'Test FAILURE!',
-                message: test.parent + ' ' + test.title
-            });
             if (!fs.existsSync(this.screenshotPath)) {
                 fs.mkdirSync(this.screenshotPath);
             }
@@ -254,17 +246,15 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    // afterSession: function (config, capabilities, specs) {
-    // },
+    afterSession: function (config, capabilities, specs) {
+        browser.close();
+    }
     /**
      * Gets executed after all workers got shut down and the process is about to exit. It is not
      * possible to defer the end of the process using a promise.
      * @param {Object} exitCode 0 - success, 1 - fail
      */
-    onComplete: function(exitCode) {
-        notifier.notify({
-            title: "NodeJS/wdio Test Example",
-            message: 'Tests finished running.'
-        });
-    }
-}
+    // onComplete: function(exitCode) {
+    //
+    // }
+};
