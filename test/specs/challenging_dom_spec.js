@@ -40,6 +40,4 @@ describe('Challenging DOM: https://the-internet.herokuapp.com/challenging_dom', 
 		expect(cols.length).to.equal(7);
 	});
 
-
-
 });
