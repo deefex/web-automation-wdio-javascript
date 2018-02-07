@@ -10,6 +10,7 @@
     "allure-commandline": "^2.5.0",
     "chai": "^4.1.2",
     "fs": "0.0.1-security",
+    "html-dnd": "^1.2.0",
     "npm-run-all": "^4.1.2",
     "selenium-standalone": "^6.12.0",
     "webdriverio": "^4.10.1",
