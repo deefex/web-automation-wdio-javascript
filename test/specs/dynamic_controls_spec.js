@@ -3,7 +3,7 @@ var DynamicControlsPage = require('../pageobjects/dynamic_controls_page');
 
 describe('Dynamic Controls: https://the-internet.herokuapp.com/dynamic_controls', function() {
 
-	// todo - just using simple `waitForExist` calls here - could be improved to stop hanging forever
+	// simple calls to waitforExist - assuming config timeout will kick in eventually.
 
 	it('check that the checkbox (he he) appears by default on page load', function() {
 		DynamicControlsPage.open();
