@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var basicAuthPage = Object.create(Page, {
+let basicAuthPage = Object.create(Page, {
 
 	// Page object elements
 	pageHeading:      { get: function () { return browser.getText('h3'); } }, // "Basic Auth"

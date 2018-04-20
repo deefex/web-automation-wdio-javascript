@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var DynamicLoadingPage1 = require('../pageobjects/dynamic_loading_page_1');
+let expect = require('chai').expect;
+let DynamicLoadingPage1 = require('../pageobjects/dynamic_loading_page_1');
 
 describe('Dynamic Loading 1: https://the-internet.herokuapp.com/dynamic_loading/1', function() {
 

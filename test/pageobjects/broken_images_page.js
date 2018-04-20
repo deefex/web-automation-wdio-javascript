@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var brokenImagesPage = Object.create(Page, {
+let brokenImagesPage = Object.create(Page, {
 
     // Page object elements
     image1:      { get: function () { return browser.element('//*[@id="content"]/div/img[1]'); } },

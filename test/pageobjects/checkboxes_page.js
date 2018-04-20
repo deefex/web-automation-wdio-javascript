@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var checkboxesPage = Object.create(Page, {
+let checkboxesPage = Object.create(Page, {
 
     // Page object elements
     checkbox1:     { get: function () { return browser.element('//*[@id="checkboxes"]/input[1]'); } },

@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var CheckboxesPage = require('../pageobjects/checkboxes_page');
+let expect = require('chai').expect;
+let CheckboxesPage = require('../pageobjects/checkboxes_page');
 
 describe('Checkboxes: https://the-internet.herokuapp.com/checkboxes', function() {
 

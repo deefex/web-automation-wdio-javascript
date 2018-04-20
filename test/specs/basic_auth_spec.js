@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var BasicAuthPage = require('../pageobjects/basic_auth_page');  // Not actually used (see below)
+let expect = require('chai').expect;
+let BasicAuthPage = require('../pageobjects/basic_auth_page');  // Not actually used (see below)
 
 describe('Basic Auth: https://the-internet.herokuapp.com/basic_auth', function() {
 
@@ -8,7 +8,7 @@ describe('Basic Auth: https://the-internet.herokuapp.com/basic_auth', function()
 	// values to perform the check. Refactor when webdriverio gets its shit together.
 
 	it('should ALLOW access to the basic auth page with valid credentials', function() {
-		var BAPage = browser.getUrl("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+		let BAPage = browser.getUrl("http://admin:admin@the-internet.herokuapp.com/basic_auth");
 		expect(BAPage.includes("Congratulations! You must have the proper credentials."));
 	});
 

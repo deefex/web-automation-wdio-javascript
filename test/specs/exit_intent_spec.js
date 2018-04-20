@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var ExitIntentPage = require('../pageobjects/exit_intent_page');
+let expect = require('chai').expect;
+let ExitIntentPage = require('../pageobjects/exit_intent_page');
 
 describe('Exit Intent: https://the-internet.herokuapp.com/exit_intent', function() {
 

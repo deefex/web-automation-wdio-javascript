@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var dynamicControlsPage = Object.create(Page, {
+let dynamicControlsPage = Object.create(Page, {
 
 	// Page object elements
 	button:        { get: function () { return browser.element('#btn'); } },

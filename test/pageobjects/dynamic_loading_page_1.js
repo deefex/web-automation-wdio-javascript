@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var dynamicLoadingPage1 = Object.create(Page, {
+let dynamicLoadingPage1 = Object.create(Page, {
 
 	// Page object elements
 	startButton:   { get: function () { return browser.element('#start > button'); } },

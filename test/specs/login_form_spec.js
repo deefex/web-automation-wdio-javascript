@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var LoginForm = require('../pageobjects/login_form');
+let expect = require('chai').expect;
+let LoginForm = require('../pageobjects/login_form');
 
 describe('Form Authentication: https://the-internet.herokuapp.com/login', function() {
 

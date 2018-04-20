@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var abTestPage = Object.create(Page, {
+let abTestPage = Object.create(Page, {
 
     // Page object elements
     pageHeading:      { get: function () { return browser.getText('h3'); } },

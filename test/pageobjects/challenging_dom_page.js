@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var challengingDomPage = Object.create(Page, {
+let challengingDomPage = Object.create(Page, {
 
 	// Page object elements
 	blueButton:     { get: function () { return browser.element('//*[@id="content"]/div/div/div/div[1]/a[1]'); } },

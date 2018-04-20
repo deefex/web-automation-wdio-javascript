@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var loginForm = Object.create(Page, {
+let loginForm = Object.create(Page, {
 
     // Page object elements
     form:           { get: function () { return browser.element('#login'); } },

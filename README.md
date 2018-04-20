@@ -2,6 +2,9 @@
 
 Selenium tests experiment for https://the-internet.herokuapp.com/ pages using NodeJS/webdriverio.
 
+# Requirements
+* Use nodeJS v9 or above
+
 # Setup
 
 * Clone repository

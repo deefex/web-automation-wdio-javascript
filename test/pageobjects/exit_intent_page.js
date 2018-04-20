@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var exitIntentPage = Object.create(Page, {
+let exitIntentPage = Object.create(Page, {
 
     // Page object elements
     modal:       { get: function () { return browser.element('#ouibounce-modal'); } },

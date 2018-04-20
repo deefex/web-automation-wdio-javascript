@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var dynamicContentPage = Object.create(Page, {
+let dynamicContentPage = Object.create(Page, {
 
     // Page object elements
     row1Img:  { get: function () { return browser.getAttribute('//*[@id="content"]/div[1]/div[1]/img', 'src'); } },

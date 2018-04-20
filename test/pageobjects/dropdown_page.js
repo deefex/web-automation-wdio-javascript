@@ -1,6 +1,6 @@
-var Page = require('./page');
+let Page = require('./page');
 
-var dropDownPage = Object.create(Page, {
+let dropDownPage = Object.create(Page, {
 
     // Page object elements
     dropdown:       { get: function () { return browser.element('#dropdown'); } },

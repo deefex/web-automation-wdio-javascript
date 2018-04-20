@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var ChallengingDomPage = require('../pageobjects/challenging_dom_page');
+let expect = require('chai').expect;
+let ChallengingDomPage = require('../pageobjects/challenging_dom_page');
 
 describe('Challenging DOM: https://the-internet.herokuapp.com/challenging_dom', function() {
 

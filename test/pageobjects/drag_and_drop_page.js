@@ -1,7 +1,7 @@
-var dragAndDrop = require('html-dnd').codeForSelectors;
-var Page = require('./page');
+let dragAndDrop = require('html-dnd').codeForSelectors;
+let Page = require('./page');
 
-var dragAndDropPage = Object.create(Page, {
+let dragAndDropPage = Object.create(Page, {
 
 	// Page object elements
 	column1:     { get: function () { return browser.element('#column-a'); } },

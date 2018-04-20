@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var DragAndDropPage = require('../pageobjects/drag_and_drop_page');
+let expect = require('chai').expect;
+let DragAndDropPage = require('../pageobjects/drag_and_drop_page');
 
 describe('Drag & Drop: https://the-internet.herokuapp.com/drag_and_drop', function() {
 

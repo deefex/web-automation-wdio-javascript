@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var DropDownPage = require('../pageobjects/dropdown_page');
+let expect = require('chai').expect;
+let DropDownPage = require('../pageobjects/dropdown_page');
 
 describe('Dropdown: https://the-internet.herokuapp.com/dropdown', function() {
 

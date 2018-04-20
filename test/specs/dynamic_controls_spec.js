@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var DynamicControlsPage = require('../pageobjects/dynamic_controls_page');
+let expect = require('chai').expect;
+let DynamicControlsPage = require('../pageobjects/dynamic_controls_page');
 
 describe('Dynamic Controls: https://the-internet.herokuapp.com/dynamic_controls', function() {
 
