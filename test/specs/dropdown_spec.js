@@ -10,7 +10,7 @@ describe('Dropdown: https://the-internet.herokuapp.com/dropdown', function() {
 
     it('the first option can be selected successfully', function() {
         DropDownPage.open();
-        DropDownPage.dropdown.selectByValue('1');
+        DropDownPage.dropdown.selectByAttribute('value', '1'); // formerly selectByValue in wdio4
         expect(DropDownPage.dropdown.getValue()).to.equal('1');
     });
 

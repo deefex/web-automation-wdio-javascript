@@ -1,6 +1,7 @@
 # Information
 
-Selenium tests experiment for https://the-internet.herokuapp.com/ pages using NodeJS/webdriverio.
+Selenium tests experiment for https://the-internet.herokuapp.com/ pages using NodeJS/webdriverio
+Recently upgraded to use webdriverio v5
 
 # Requirements
 * Use nodeJS v9 or above

@@ -10,14 +10,14 @@ describe('Dynamic Loading 1: https://the-internet.herokuapp.com/dynamic_loading/
 
 	it('check that the -Hello World!- message is NOT visible by default', function() {
 		DynamicLoadingPage1.open();
-		expect(DynamicLoadingPage1.message.isVisible()).to.equal(false);
+		expect(DynamicLoadingPage1.message.isDisplayed()).to.equal(false);
 	});
 
 	it('when I click on the Start button, the -Hello World!- message becomes visible', function() {
 		DynamicLoadingPage1.open();
 		DynamicLoadingPage1.startButton.click();
-		DynamicLoadingPage1.message.waitForVisible();
-		expect(DynamicLoadingPage1.message.isVisible()).to.equal(true);
+		DynamicLoadingPage1.message.waitForDisplayed();
+		expect(DynamicLoadingPage1.message.isDisplayed()).to.equal(true);
 	});
 
 });

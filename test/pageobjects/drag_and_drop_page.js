@@ -4,14 +4,20 @@ let Page = require('./page');
 let dragAndDropPage = Object.create(Page, {
 
 	// Page object elements
-	column1:     { get: function () { return browser.element('#column-a'); } },
-	column2:     { get: function () { return browser.element('#column-b'); } },
-	column1Text: { get: function () { return browser.getText('#column-a > header'); } },
-	column2Text: { get: function () { return browser.getText('#column-b > header'); } },
+	pageHeading: { get: function () { return $('h3'); } },
+	column1:     { get: function () { return $('#column-a'); } },
+	column2:     { get: function () { return $('#column-b'); } },
+	column1Text: { get: function () { return $('#column-a > header').getText(); } },
+	column2Text: { get: function () { return $('#column-b > header').getText(); } },
 
 	// Define or overwrite page methods
 	open:   { value: function () {
 			Page.open.call(this, 'drag_and_drop');
+		}
+	},
+
+	waitForPageToLoad: { value: function() {
+			this.pageHeading.waitForDisplayed(undefined, false, "dragAndDropPage: Mandatory element not found.");
 		}
 	},
 

@@ -11,7 +11,7 @@ describe('Exit Intent: https://the-internet.herokuapp.com/exit_intent', function
     it('check that the modal is visible', function() {
         ExitIntentPage.open();
         ExitIntentPage.showModal();
-        expect(ExitIntentPage.modal.isVisible()).to.equal(true);
+        expect(ExitIntentPage.modal.isDisplayed()).to.equal(true);
     });
 
 });
