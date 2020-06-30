@@ -7,7 +7,7 @@ describe('Dynamic Content: https://the-internet.herokuapp.com/dynamic_content', 
     // to time, causing the image tests to fail.
 
     it('the image in the 1st row is as per the static page settings', function() {
-        let ROW1_IMG = 'https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-7.jpg';
+        let ROW1_IMG = 'https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-2.jpg';
         DynamicContentPage.open();
         expect(DynamicContentPage.row1Img).to.equal(ROW1_IMG);
     });
@@ -19,7 +19,7 @@ describe('Dynamic Content: https://the-internet.herokuapp.com/dynamic_content', 
     });
 
     it('the image in the 2nd row is as per the static page settings', function() {
-        let ROW2_IMG = 'https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg';
+        let ROW2_IMG = 'https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-7.jpg';
         DynamicContentPage.open();
         expect(DynamicContentPage.row2Img).to.equal(ROW2_IMG);
     });
