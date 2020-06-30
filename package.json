@@ -1,7 +1,7 @@
 {
   "name": "theinternet-wdio",
-  "version": "1.0.1",
-  "description": "NodeJS/wdio-v5 Web Automation",
+  "version": "1.0.2",
+  "description": "NodeJS/wdio-v6 Web Automation",
   "main": "conf/wdio.conf.js",
   "scripts": {
     "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
