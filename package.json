@@ -24,7 +24,9 @@
     "@wdio/spec-reporter": "^6.1.14",
     "@wdio/sync": "^6.1.14"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.3.1"
+  },
   "keywords": [
     "webdriver",
     "webdriverio",

@@ -7,10 +7,12 @@ let abTestPage = Object.create(Page, {
     pageHeadingText:  { get: function () { return $('h3').getText(); } },
 
     // Define or overwrite page methods
-    open:   { value: function () {
-      Page.open.call(this, 'abtest');
-      this.waitForPageToLoad();
-    } },
+    open:   {
+      value: function () {
+        Page.open.call(this, 'abtest');
+        this.waitForPageToLoad();
+      }
+    },
 
     waitForPageToLoad: { value: function() {
       this.pageHeading.waitForDisplayed(undefined, false, "abTestPage: Mandatory element not found.");
