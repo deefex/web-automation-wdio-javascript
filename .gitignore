@@ -3,8 +3,8 @@ node_modules
 *.png
 .DS_Store
 errorShots
-allure-report
 allure-results
+allure-report
 coverage
 .idea
 build

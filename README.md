@@ -42,4 +42,5 @@ opens it in the browser)
 * Issues with the allure reporter. 
 
 ## TODO
-* Allure reporting seems to have gone wonky - fix this or select a different reporting tool like mochawesome 
+* Enhance the allure reporting. It's very basic at the moment.
+* Include screenshots in the reporting when failures occur.
