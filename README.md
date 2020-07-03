@@ -2,8 +2,8 @@
 
 This is a web browser automation demo which uses a fairly standard page object model and runs some browser tests
 against the wonderful [The Internet](https://the-internet.herokuapp.com/) site using Javascript and Webdriverio v6. 
-There is a Typescript version in a similarly named repo, but I was curious how the code would look if the overhead 
-of transpilation was taken out of the equation.
+There is a Typescript version in a similarly named repo, found here - [web-automation-wdio-typescript](https://github.com/deefex/web-automation-wdio-typescript), 
+but I was curious how the code would look if the overhead of transpilation was taken out of the equation.
 
 This repo was born out of an experiment with webdriverio v4, and was updated when v5 came along, and again when v6 
 appeared.
